@@ -8,13 +8,10 @@ ${browser}            chrome
 *** Keywords ***
 
 Open Start Page
-    open browser     ${start_page}  ${browser}
+    open browser     ${start_page}  ${browser}    alias=start_page
     maximize browser window
 
 Finish TestCase
     close all browsers
 
-Close Authenticate Page
-    close browser
-    sleep    10s
 

@@ -42,8 +42,7 @@ Authenticate Token
     sleep       2s
     page should contain     Token Request
     ${code}=         get webelement       ${auth_code}
-    open browser     ${activation_url}    ${browser}
-    maximize browser window
+    open browser     ${activation_url}    ${browser}        alias=activate_page
     page should contain textfield    ${code_input}
     page should contain     Device Activation
     page should contain element     ${continue_button}
@@ -56,3 +55,8 @@ Authenticate Token
     input password   ${password}           AppleTv#22
     click element    ${login_button}
     page should contain    Congratulations
+
+Verify Final Page
+    switch browser    start_page
+    sleep   10s
+    page should contain     Welcome, testnetsiden!

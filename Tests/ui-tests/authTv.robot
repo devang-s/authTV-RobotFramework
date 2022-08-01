@@ -19,7 +19,7 @@ Device Code Verification
     Open Authorization Page
     Verify Authorization Page
     Authenticate Token
-    Close Authenticate Page
+    Verify Final Page
     Finish TestCase
 
 *** Keywords ***
